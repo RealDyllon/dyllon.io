@@ -20,9 +20,7 @@ const Home: NextPage = () => {
             <h1 className={styles.title}>i&apos;m dyllon</h1>
           </div>
 
-          <p className={styles.subtitle}>
-            i&apos;m a software engineer in singapore
-          </p>
+          <p className={styles.subtitle}>im a software engineer in singapore</p>
 
           <p className={styles.description}>
             i build neat things in these languages:
