@@ -17,11 +17,11 @@ const Home: NextPage = () => {
         <main className={styles.main}>
           <div className={styles.titleContainer}>
             <h1 className={styles.title}>hello, </h1>
-            <h1 className={styles.title}>i'm dyllon</h1>
+            <h1 className={styles.title}>i&apos;m dyllon</h1>
           </div>
 
           <p className={styles.subtitle}>
-            i'm a software engineer in singapore
+            i&apos;m a software engineer in singapore
           </p>
 
           <p className={styles.description}>
