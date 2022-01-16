@@ -4,15 +4,22 @@
   position: -webkit-sticky;
   position: sticky;
   top: 0;
-  padding: 16px;
-  background: cornsilk;
+  padding: 24px;
+  /* background: cornsilk; */
   display: flex;
   align-items: center;
+}
+
+@media screen and (max-width: 1000px) {
+  .navbar {
+    background: #fff;
+  }
 }
 
 .navbarTitle {
   margin: 0;
   font-weight: 500;
+  font-size: 1.6rem;
 }
 
 .navbarSpacer {
