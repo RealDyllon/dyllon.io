@@ -26,7 +26,9 @@ const Navbar = ({ hideAtTop = false }: Options) => {
           >
             {value.displayText}
           </a>
-          {index < Object.entries(contactData).length - 1 && <p>•</p>}
+          {index < Object.entries(contactData).length - 1 && (
+            <p className={styles.bullet}>•</p>
+          )}
         </>
       ))}
     </div>

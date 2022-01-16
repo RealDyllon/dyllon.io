@@ -30,3 +30,16 @@
   margin-left: 12px;
   margin-right: 12px;
 }
+
+.bullet {
+}
+
+@media screen and (max-width: 320px) {
+  .navbarItem:nth-last-of-type(1) {
+    display: none;
+  }
+
+  .bullet:nth-last-of-type(1) {
+    display: none;
+  }
+}
