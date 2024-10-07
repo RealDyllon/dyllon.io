@@ -4,6 +4,7 @@ import LangMarquee from "../components/LangMarquee";
 import Navbar from "../components/Navbar";
 import contactData from "../data/contact";
 import styles from "../styles/Home.module.css";
+import {EmblaCarousel} from "../components/Carousel";
 
 const Home: NextPage = () => {
   return (
@@ -29,7 +30,9 @@ const Home: NextPage = () => {
           {/* <p> todo: add languages ticker here</p>
            */}
 
-          <LangMarquee />
+          {/*<LangMarquee />*/}
+
+          <EmblaCarousel />
 
           {/* <p className={styles.description}>here are a few of my projects</p>
           <p> todo: add projects here</p> */}
@@ -53,7 +56,7 @@ const Home: NextPage = () => {
         </main>
 
         <footer className={styles.footer}>
-          <small>&copy; Copyright 2022 Dyllon Gunawardhana</small>
+          <small>&copy; Copyright 2024 Dyllon Gunawardhana</small>
         </footer>
       </div>
     </>

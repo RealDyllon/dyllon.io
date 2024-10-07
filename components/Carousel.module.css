@@ -1,0 +1,31 @@
+.embla {
+    overflow: hidden;
+    /*background-color: aqua;*/
+    width: 100%;
+}
+.embla__container {
+    display: flex;
+}
+.embla__slide {
+    flex: 0 0 16rem;
+    min-width: 0;
+}
+
+@media screen and (max-width: 1024px) {
+    .embla__slide {
+        flex: 0 0 12rem;
+        min-width: 0;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .embla__slide {
+        flex: 0 0 10rem;
+        min-width: 0;
+    }
+}
+
+.langlogo {
+    height: 4rem;
+    width: 4rem;
+}
