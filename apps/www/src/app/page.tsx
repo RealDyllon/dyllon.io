@@ -13,9 +13,7 @@ export default function Home(): JSX.Element {
   return (
     <>
       <Navbar />
-      <div className="container mx-auto">
-        {" "}
-        {/* Added container for centering */}
+      <div className="">
         <main className="min-h-screen flex flex-col justify-center items-center">
           <div className="mx-4 flex flex-wrap justify-center">
             <h1 className="m-1 text-center">hello,</h1>
@@ -35,8 +33,6 @@ export default function Home(): JSX.Element {
           <div className="mt-20 flex flex-row items-center">
             {Object.entries(contactData).map(([key, value], index) => (
               <React.Fragment key={key}>
-                {" "}
-                {/* Use Fragment for key */}
                 <a
                   className="mx-2"
                   href={value.url}
