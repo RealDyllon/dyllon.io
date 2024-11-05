@@ -1,6 +1,5 @@
 import React from "react";
 import type { Preview } from "@storybook/react";
-import { withThemeByClassName } from '@storybook/addon-themes';
 import { withNextThemes } from "./decorators/with-next-themes";
 
 import "../src/globals.css"
