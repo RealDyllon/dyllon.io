@@ -4,7 +4,7 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
   return {
     ...components,
     h1: ({ children }) => (
-      <h1 className="bg-black dark:bg-white text-white dark:text-black mb-4 p-2">
+      <h1 className="text-5xl md:text-6xl hyphens-auto bg-black dark:bg-white text-white dark:text-black mb-4 p-2">
         {children}
       </h1>
     ),
@@ -30,7 +30,7 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
     ),
     li: ({ children }) => <li className="text-lg">{children}</li>,
     code: ({ children }) => (
-      <code className="inline-block bg-slate-800 text-emerald-300 px-3 py-3 w-full">
+      <code className="inline-block text-wrap bg-slate-800 text-emerald-300 px-3 py-3 w-full">
         {children}
       </code>
     ),

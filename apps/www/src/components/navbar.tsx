@@ -29,7 +29,11 @@ function Navbar({ hideAtTop = false }: Options) {
       </Link>
       <div className="flex-1" /> {/* Spacer */}
       <div className="hidden md:flex flex-row items-center gap-2 mx-3">
-        <ThemeToggle buttonVariant="ghost" className="mx-2" />
+        <ThemeToggle
+          buttonVariant="ghost"
+          triggerClassname="mx-2"
+          contentClassname="rounded-sm"
+        />
         {Object.entries(items).map(([key, value], index) => (
           <Link href={value.url} key={key}>
             <Button className="font-medium text-lg" variant="ghost">
@@ -38,7 +42,7 @@ function Navbar({ hideAtTop = false }: Options) {
           </Link>
         ))}
       </div>
-      <div className="md:hidden">menu</div>
+      <div className="md:hidden mx-3">menu</div>
     </div>
   );
 }
