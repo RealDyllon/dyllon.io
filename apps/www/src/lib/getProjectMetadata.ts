@@ -5,24 +5,25 @@ import matter from 'gray-matter';
 // Define the shape of your frontmatter
 interface PostFrontmatter {
   title?: string;
-  subtitle?: string;
+  description?: string;
   image?: string;
   date?: Date;
+  url?: string;
   [key: string]: unknown; // Allow for additional frontmatter fields
 }
 
-const postsDirectory = path.join(process.cwd(), 'src','app', 'blog'); // Updated path to match your structure
+const postsDirectory = path.join(process.cwd(), 'src','app', 'projects'); // Updated path to match your structure
 
 // console.log("postsDirectory:", postsDirectory)
 
-export async function getBlogPostMetadata() {
+export async function getProjectMetadata() {
   const fileNames = await getFilesRecursively(postsDirectory);
 
   const allPostsData = await Promise.all(
     fileNames.map(async (fullPath) => {
       // Get the relative path from the blog directory as the route
       const relativePath = path.relative(postsDirectory, fullPath);
-      const id = `${relativePath.replace(/\/page\.mdx$/, '').replace(/\(blogpage\)/, '')}`;
+      const id = `${relativePath.replace(/\/page\.mdx$/, '').replace(/\(projectpage\)/, '')}`;
       
       // Read markdown file as string
       const fileContents = await fs.promises.readFile(fullPath, 'utf8');
@@ -37,7 +38,7 @@ export async function getBlogPostMetadata() {
           .find(line => !line.startsWith('#') && line.trim().length > 0) || '';
 
         return {
-          route: `/blog${id}`,
+          route: `/projects${id}`,
           frontmatter: {
             ...matterResult.data,
             subtitle: firstSentence.trim()

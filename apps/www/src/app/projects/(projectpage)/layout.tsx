@@ -1,31 +1,32 @@
 import { Button } from "@repo/ui/components/ui/button";
 import { ArrowLeft } from "lucide-react";
 import Link from "next/link";
+import { ProjectInfoVisitButton } from "../../../components/project-info-visit-button";
 
-export default function BlogPostLayout({
+export default function ProjectPageLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
   return (
     <div className="px-6 pt-6">
-      <div className="max-w-3xl mx-auto flex flex-col gap-2 mb-4">
-        <BackToBlogMain />
+      <div className="max-w-4xl mx-auto flex flex-col gap-2 mb-4">
+        <BackToProjects />
         {children}
         <div className="my-4">
-          <BackToBlogMain />
+          <BackToProjects />
         </div>
       </div>
     </div>
   );
 }
 
-function BackToBlogMain() {
+function BackToProjects() {
   return (
-    <Link href="/blog">
+    <Link href="/projects">
       <Button variant="secondary" className="flex gap-1">
         <ArrowLeft size={20} />
-        All blog posts
+        All projects
       </Button>
     </Link>
   );
