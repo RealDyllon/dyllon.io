@@ -1,24 +1,27 @@
-"use client"
+"use client";
 
-import * as React from "react"
-import {Laptop, Moon, Sun} from "lucide-react"
-import { useTheme } from "next-themes"
+import * as React from "react";
+import { Laptop, Moon, Sun } from "lucide-react";
+import { useTheme } from "next-themes";
 
-import {Button, ButtonProps} from "@repo/ui/components/ui/button"
+import { Button, ButtonProps } from "@repo/ui/components/ui/button";
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
-} from "@repo/ui/components/ui/dropdown-menu"
+} from "@repo/ui/components/ui/dropdown-menu";
 
 interface ThemeToggleProps {
   className?: string;
-  buttonVariant?: ButtonProps["variant"]
+  buttonVariant?: ButtonProps["variant"];
 }
 
-export function ThemeToggle({className, buttonVariant = "outline"}: ThemeToggleProps) {
-  const { theme, setTheme } = useTheme()
+export function ThemeToggle({
+  className,
+  buttonVariant = "outline",
+}: ThemeToggleProps) {
+  const { theme, setTheme } = useTheme();
 
   return (
     <DropdownMenu>
@@ -44,5 +47,5 @@ export function ThemeToggle({className, buttonVariant = "outline"}: ThemeToggleP
         </DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>
-  )
+  );
 }

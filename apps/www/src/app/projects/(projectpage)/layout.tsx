@@ -21,10 +21,10 @@ export default function ProjectPageLayout({
   );
 }
 
-function BackToProjects() {
+function BackToProjects(): JSX.Element {
   return (
     <Link href="/projects">
-      <Button variant="secondary" className="flex gap-1">
+      <Button className="flex gap-1" variant="secondary">
         <ArrowLeft size={20} />
         All projects
       </Button>

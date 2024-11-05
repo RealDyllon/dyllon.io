@@ -1,9 +1,10 @@
 ---
-title: 'Containerizing Node.js Apps with Docker: A Step-by-Step Guide'
+title: "Containerizing Node.js Apps with Docker: A Step-by-Step Guide"
 description: Learn how to containerize your Node.js applications using Docker. Perfect for beginners looking to understand containers and deployments.
 date: 2024-09-12
 image: https://unsplash.com/photos/jQ6bMceL4Gw/download?ixid=M3wxMjA3fDB8MXxzZWFyY2h8Mnx8Y29udGFpbmVyJTIwc2hpcHxlbnwwfDB8fHwxNzMwNzUzMDMzfDA&w=1920&q=85
 ---
+
 # Containerizing a Node.js App with Docker: A Beginner's Guide
 
 Hey there! Today I'm going to walk you through how to containerize a Node.js application using Docker. When I first learned about containers, it seemed pretty intimidating, but I promise it's not that bad once you break it down into steps.
@@ -14,11 +15,12 @@ Before we dive in, let's quickly cover what Docker is. Think of Docker as a way 
 
 ## Prerequisites
 
-* Node.js installed on your computer
-* Docker Desktop installed
-* A simple Node.js application (we'll use a basic Express app as an example)
+- Node.js installed on your computer
+- Docker Desktop installed
+- A simple Node.js application (we'll use a basic Express app as an example)
 
 ## 1. Creating a Simple Node.js App
+
 First, let's create a super basic Node.js app. Make a new directory and initialize it:
 
 ```bash
@@ -26,15 +28,16 @@ mkdir docker-nodejs-demo
 cd docker-nodejs-demo
 npm init -y
 ```
+
 Now create an index.js file:
 
 ```typescript
-const express = require('express');
+const express = require("express");
 const app = express();
 const port = 3000;
 
-app.get('/', (req, res) => {
-  res.send('Hello from my containerized app! 🐳');
+app.get("/", (req, res) => {
+  res.send("Hello from my containerized app! 🐳");
 });
 
 app.listen(port, () => {
@@ -102,9 +105,9 @@ The -p 3000:3000 flag maps port 3000 from the container to port 3000 on your mac
 
 ## Bonus Tips!
 
-* Use .dockerignore to exclude node_modules and other unnecessary files
-* For production, consider using multi-stage builds
-* Always specify a Node.js version instead of using latest
+- Use .dockerignore to exclude node_modules and other unnecessary files
+- For production, consider using multi-stage builds
+- Always specify a Node.js version instead of using latest
 
 ## Next Steps
 

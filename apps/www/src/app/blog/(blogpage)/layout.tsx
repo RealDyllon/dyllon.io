@@ -6,7 +6,7 @@ export default function BlogPostLayout({
   children,
 }: {
   children: React.ReactNode;
-}) {
+}): JSX.Element {
   return (
     <div className="px-6 pt-6">
       <div className="max-w-3xl mx-auto flex flex-col gap-2 mb-4">
@@ -20,10 +20,10 @@ export default function BlogPostLayout({
   );
 }
 
-function BackToBlogMain() {
+function BackToBlogMain(): JSX.Element {
   return (
     <Link href="/blog">
-      <Button variant="secondary" className="flex gap-1">
+      <Button className="flex gap-1" variant="secondary">
         <ArrowLeft size={20} />
         All blog posts
       </Button>
