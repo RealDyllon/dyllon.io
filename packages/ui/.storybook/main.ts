@@ -15,6 +15,10 @@ const config: StorybookConfig = {
   getAbsolutePath("@storybook/addon-onboarding"), getAbsolutePath("@storybook/addon-essentials"), // getAbsolutePath("@chromatic-com/storybook"),
   getAbsolutePath("@storybook/addon-interactions"), getAbsolutePath("@storybook/addon-themes")],
   framework: '@storybook/experimental-nextjs-vite',
+  staticDirs: [
+    '../public',
+    '../static'
+  ],
   // framework: {
   //   name: getAbsolutePath("@storybook/react-webpack5"),
   //   options: {},
