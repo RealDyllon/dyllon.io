@@ -3,7 +3,7 @@ import {getProjectMetadata} from "../../lib/getProjectMetadata.ts";
 import {Button} from "@repo/ui/components/ui/button";
 import Link from "next/link";
 
-export default async function Projects() {
+export default async function Projects(): JSX.Elementpnpm {
   const projects = await getProjectMetadata();
 
   console.log("projects", projects)
