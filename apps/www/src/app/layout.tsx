@@ -20,20 +20,22 @@ export default function RootLayout({
   return (
     <html className={`${outfit.variable} `} lang="en">
       <body className="bg-white text-black dark:bg-black dark:text-white w-screen overflow-x-hidden">
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="system"
-          disableTransitionOnChange
-          enableSystem
-        >
-          <div className="min-h-[calc(100svh-88px)]">
-            <Navbar />
-            {children}
-          </div>
-          <footer className="flex justify-center items-center h-16 border-t text-gray-600 dark:text-gray-400">
-            <small>&copy; Copyright 2024 Dyllon Gunawardhana</small>
-          </footer>
-        </ThemeProvider>
+        <div vaul-drawer-wrapper="">
+          <ThemeProvider
+            attribute="class"
+            defaultTheme="system"
+            disableTransitionOnChange
+            enableSystem
+          >
+            <div className="min-h-[calc(100svh-88px)]">
+              <Navbar />
+              {children}
+            </div>
+            <footer className="flex justify-center items-center h-16 border-t text-gray-600 dark:text-gray-400">
+              <small>&copy; Copyright 2024 Dyllon Gunawardhana</small>
+            </footer>
+          </ThemeProvider>
+        </div>
       </body>
       <GoogleAnalytics gaId="G-3M4V10RQEG" />
     </html>

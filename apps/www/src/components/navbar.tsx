@@ -3,17 +3,12 @@ import React from "react";
 import { ThemeToggle } from "@repo/ui/components/theme/theme-toggle";
 import { Button } from "@repo/ui/components/ui/button";
 import Link from "next/link";
+import { NavbarMobileMenu } from "./navbar-mobile-menu";
+import { navigationItems } from "../data/navigation";
 
 interface Options {
   hideAtTop?: boolean;
 }
-
-const items = [
-  { label: "home", url: "/" },
-  { label: "about", url: "/about" },
-  { label: "projects", url: "/projects" },
-  { label: "blog", url: "/blog" },
-];
 
 function Navbar({ hideAtTop = false }: Options) {
   // const scrollY = useScrollPosition(hideAtTop ? 0 : 60 /*fps*/);
@@ -32,7 +27,7 @@ function Navbar({ hideAtTop = false }: Options) {
           contentClassname="rounded-sm"
           triggerClassname="mx-2"
         />
-        {Object.entries(items).map(([key, value], index) => (
+        {Object.entries(navigationItems).map(([key, value], index) => (
           <Link href={value.url} key={key}>
             <Button className="font-medium text-lg" variant="ghost">
               {value.label}
@@ -40,7 +35,7 @@ function Navbar({ hideAtTop = false }: Options) {
           </Link>
         ))}
       </div>
-      <div className="md:hidden mx-3">menu</div>
+      <NavbarMobileMenu />
     </div>
   );
 }

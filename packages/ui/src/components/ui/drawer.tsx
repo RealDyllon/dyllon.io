@@ -7,6 +7,7 @@ import { cn } from "@repo/ui/lib/utils";
 
 const Drawer = ({
   shouldScaleBackground = true,
+  // setBackgroundColorOnScale = false,
   ...props
 }: React.ComponentProps<typeof DrawerPrimitive.Root>) => (
   <DrawerPrimitive.Root
