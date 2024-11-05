@@ -11,13 +11,9 @@ function getAbsolutePath(value: string): any {
 }
 const config: StorybookConfig = {
   stories: ["../src/**/*.mdx", "../src/**/*.stories.@(js|jsx|mjs|ts|tsx)"],
-  addons: [
-    // getAbsolutePath("@storybook/addon-webpack5-compiler-swc"),
-    getAbsolutePath("@storybook/addon-onboarding"),
-    getAbsolutePath("@storybook/addon-essentials"),
-    // getAbsolutePath("@chromatic-com/storybook"),
-    getAbsolutePath("@storybook/addon-interactions"),
-  ],
+  addons: [// getAbsolutePath("@storybook/addon-webpack5-compiler-swc"),
+  getAbsolutePath("@storybook/addon-onboarding"), getAbsolutePath("@storybook/addon-essentials"), // getAbsolutePath("@chromatic-com/storybook"),
+  getAbsolutePath("@storybook/addon-interactions"), getAbsolutePath("@storybook/addon-themes")],
   framework: '@storybook/experimental-nextjs-vite',
   // framework: {
   //   name: getAbsolutePath("@storybook/react-webpack5"),
@@ -26,5 +22,11 @@ const config: StorybookConfig = {
   features: {
     experimentalRSC: true,
   },
+  managerHead: head => `
+    ${head}
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+  `,
 };
 export default config;
