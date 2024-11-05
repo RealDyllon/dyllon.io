@@ -8,7 +8,7 @@ export default function ProjectPageLayout({
   children: React.ReactNode;
 }) {
   return (
-    <div className="px-6 pt-6">
+    <div className="container pt-6">
       <div className="max-w-4xl mx-auto flex flex-col gap-2 mb-4">
         <BackToProjects />
         {children}

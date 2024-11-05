@@ -17,10 +17,10 @@ export function NavbarMobileMenu(): JSX.Element {
   const [isOpen, setOpen] = useState(false);
 
   return (
-    <div className="md:hidden ml-3">
+    <div className="md:hidden ml-3 -mr-1">
       <Drawer onOpenChange={setOpen} open={isOpen}>
         <DrawerTrigger asChild>
-          <Button className="font-medium text-lg" variant="ghost">
+          <Button className="font-medium text-lg px-2" variant="ghost">
             menu
           </Button>
         </DrawerTrigger>

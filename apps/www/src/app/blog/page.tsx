@@ -8,9 +8,9 @@ export default async function Blog(): Promise<JSX.Element> {
   // console.log("posts", posts)
 
   return (
-    <div>
-      <h2 className="mt-2 px-6 font-semibold">blog</h2>
-      <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 max-w-screen-2xl gap-5 my-6 px-6">
+    <div className="container">
+      <h2 className="mt-2 font-semibold">blog</h2>
+      <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-5 my-6">
         {posts.map((post) => (
           <Link href={post.route} key={post.route}>
             <div className="bg-black dark:bg-zinc-900 text-white px-4 py-6 hover:opacity-90 transition-all h-full flex flex-col">

@@ -8,8 +8,8 @@ export default function BlogPostLayout({
   children: React.ReactNode;
 }): JSX.Element {
   return (
-    <div className="px-6 pt-6">
-      <div className="max-w-3xl mx-auto flex flex-col gap-3 mb-4">
+    <div className="container pt-6">
+      <div className="max-w-4xl mx-auto flex flex-col gap-3 mb-4">
         <BackToBlogMain />
         {children}
         <div className="my-4">

@@ -9,9 +9,9 @@ export default async function Projects(): Promise<JSX.Element> {
   // console.log("projects", projects);
 
   return (
-    <div>
-      <h2 className="mt-2 px-6 font-semibold">projects</h2>
-      <div className="grid grid-cols-1 xl:grid-cols-2 max-w-screen-2xl gap-5 my-6 px-6">
+    <div className="container">
+      <h2 className="mt-2 font-semibold">projects</h2>
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 my-6">
         {projects.map((project) => (
           <div
             className="bg-black dark:bg-zinc-900 text-white px-5 py-5 hover:opacity-90 transition-all h-full flex flex-col"

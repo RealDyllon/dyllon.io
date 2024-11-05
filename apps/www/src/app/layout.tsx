@@ -27,7 +27,7 @@ export default function RootLayout({
             disableTransitionOnChange
             enableSystem
           >
-            <div className="min-h-[calc(100svh-88px)]">
+            <div className="min-h-[calc(100svh-88px)] bg-white dark:bg-black">
               <Navbar />
               {children}
             </div>
