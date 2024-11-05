@@ -31,8 +31,8 @@ function Navbar({ hideAtTop = false }: Options) {
       <div className="hidden md:flex flex-row items-center gap-2 mx-3">
         <ThemeToggle
           buttonVariant="ghost"
-          triggerClassname="mx-2"
           contentClassname="rounded-sm"
+          triggerClassname="mx-2"
         />
         {Object.entries(items).map(([key, value], index) => (
           <Link href={value.url} key={key}>
