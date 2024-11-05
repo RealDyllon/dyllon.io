@@ -20,9 +20,9 @@ const meta: Meta<typeof Calendar> = {
     footer: {
       control: "text",
     },
-    hideWeekdayRow: {
-      control: "boolean",
-    },
+    // hideWeekdayRow: {
+    //   control: "boolean",
+    // },
     numberOfMonths: {
       control: "number",
     },
@@ -47,9 +47,9 @@ const meta: Meta<typeof Calendar> = {
     onSelect: {
       action: "onSelect",
     },
-    timeZone: {
-      control: "text",
-    },
+    // timeZone: {
+    //   control: "text",
+    // },
     locale: {
       control: "text",
     },
