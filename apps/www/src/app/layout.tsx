@@ -17,8 +17,8 @@ export default function RootLayout({
 }): JSX.Element {
   return (
     <html lang="en" className={`${outfit.variable} `}>
-      <body>
-        <div className="h-[calc(100svh-64px)]">
+      <body className="bg-white text-black dark:bg-black dark:text-white">
+        <div className="min-h-[calc(100svh-64px)]">
           <Navbar />
           {children}
         </div>
