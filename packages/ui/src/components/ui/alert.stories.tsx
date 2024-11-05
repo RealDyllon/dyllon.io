@@ -37,7 +37,9 @@ export const Destructive: Story = {
       <>
         <Terminal className="h-4 w-4" />
         <AlertTitle>Destructive Alert</AlertTitle>
-        <AlertDescription>This is a destructive alert message.</AlertDescription>
+        <AlertDescription>
+          This is a destructive alert message.
+        </AlertDescription>
       </>
     ),
   },

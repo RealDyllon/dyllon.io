@@ -30,8 +30,8 @@ export const Basic: Story = {
         <AlertDialogHeader>
           <AlertDialogTitle>Are you sure?</AlertDialogTitle>
           <AlertDialogDescription>
-            This action cannot be undone. This will permanently delete your account
-            and remove your data from our servers.
+            This action cannot be undone. This will permanently delete your
+            account and remove your data from our servers.
           </AlertDialogDescription>
         </AlertDialogHeader>
         <AlertDialogFooter>
@@ -80,7 +80,8 @@ export const CustomStyling: Story = {
             Custom Styled Alert
           </AlertDialogTitle>
           <AlertDialogDescription className="text-gray-600">
-            This is an example of a custom styled alert dialog with blue accents.
+            This is an example of a custom styled alert dialog with blue
+            accents.
           </AlertDialogDescription>
         </AlertDialogHeader>
         <AlertDialogFooter>

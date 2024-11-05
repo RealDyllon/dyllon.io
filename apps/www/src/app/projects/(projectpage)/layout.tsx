@@ -1,7 +1,6 @@
 import { Button } from "@repo/ui/components/ui/button";
 import { ArrowLeft } from "lucide-react";
 import Link from "next/link";
-import { ProjectInfoVisitButton } from "../../../components/project-info-visit-button";
 
 export default function ProjectPageLayout({
   children,

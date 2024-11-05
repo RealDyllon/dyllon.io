@@ -5,7 +5,7 @@
   "scripts": {
     "ui": "pnpm dlx shadcn@latest",
     "lint": "eslint .",
-    "storybook": "storybook dev -p 6006",
+    "dev": "storybook dev -p 6006",
     "build-storybook": "storybook build"
   },
   "exports": {

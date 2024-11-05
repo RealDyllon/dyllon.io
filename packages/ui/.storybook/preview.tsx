@@ -2,7 +2,7 @@ import React from "react";
 import type { Preview } from "@storybook/react";
 import { withNextThemes } from "./decorators/with-next-themes";
 
-import "../src/globals.css"
+import "../src/globals.css";
 
 const preview: Preview = {
   parameters: {
@@ -17,17 +17,17 @@ const preview: Preview = {
     },
     nextjs: {
       appDirectory: true,
-    }
+    },
   },
   decorators: [
     withNextThemes({
       themes: {
-        light: 'light',
-        dark: 'dark',
-        system: 'system'
+        light: "light",
+        dark: "dark",
+        system: "system",
       },
-      attribute: 'class',
-      defaultTheme: 'system',
+      attribute: "class",
+      defaultTheme: "system",
       // All next-themes properties can be configured directly here
       enableSystem: true,
       disableTransitionOnChange: true,

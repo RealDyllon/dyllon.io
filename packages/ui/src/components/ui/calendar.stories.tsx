@@ -95,6 +95,9 @@ export const RangeSelection: Story = {
   args: {
     className: "rounded-md border",
     mode: "range",
-    selected: { from: new Date(), to: new Date(new Date().setDate(new Date().getDate() + 7)) },
+    selected: {
+      from: new Date(),
+      to: new Date(new Date().setDate(new Date().getDate() + 7)),
+    },
   },
 };

@@ -10,19 +10,27 @@ function getAbsolutePath(value: string): any {
   return dirname(require.resolve(join(value, "package.json")));
 }
 const config: StorybookConfig = {
-  stories: ["../src/**/*.mdx", "../src/**/*.stories.@(js|jsx|mjs|ts|tsx)"],
-  addons: [// getAbsolutePath("@storybook/addon-webpack5-compiler-swc"),
-  getAbsolutePath("@storybook/addon-onboarding"), getAbsolutePath("@storybook/addon-essentials"), // getAbsolutePath("@chromatic-com/storybook"),
-  getAbsolutePath("@storybook/addon-interactions"), getAbsolutePath("@storybook/addon-themes")],
-  framework: '@storybook/experimental-nextjs-vite',
+  stories: [
+    "../src/intro.mdx",
+    "../src/**/*.mdx",
+    "../src/**/*.stories.@(js|jsx|mjs|ts|tsx)",
+  ],
+  addons: [
+    // getAbsolutePath("@storybook/addon-webpack5-compiler-swc"),
+    getAbsolutePath("@storybook/addon-onboarding"),
+    getAbsolutePath("@storybook/addon-essentials"), // getAbsolutePath("@chromatic-com/storybook"),
+    getAbsolutePath("@storybook/addon-interactions"),
+    getAbsolutePath("@storybook/addon-themes"),
+  ],
+  framework: "@storybook/experimental-nextjs-vite",
   staticDirs: [
-    '../public',
+    "../public",
     // '../static'
   ],
   features: {
     experimentalRSC: true,
   },
-  managerHead: head => `
+  managerHead: (head) => `
     ${head}
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>

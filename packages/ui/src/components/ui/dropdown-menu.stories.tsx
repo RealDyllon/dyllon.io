@@ -19,7 +19,16 @@ import {
 } from "./dropdown-menu";
 import { Button } from "./button";
 
-import { Settings, User, CreditCard, Mail, MessageSquare, PlusCircle, UserPlus, Github } from "lucide-react";
+import {
+  Settings,
+  User,
+  CreditCard,
+  Mail,
+  MessageSquare,
+  PlusCircle,
+  UserPlus,
+  Github,
+} from "lucide-react";
 
 const meta: Meta<typeof DropdownMenu> = {
   title: "UI/DropdownMenu",
@@ -82,7 +91,9 @@ export const WithRadioItems: Story = {
         <DropdownMenuSeparator />
         <DropdownMenuRadioGroup value="side">
           <DropdownMenuRadioItem value="side">Sidebar</DropdownMenuRadioItem>
-          <DropdownMenuRadioItem value="top">Top Navigation</DropdownMenuRadioItem>
+          <DropdownMenuRadioItem value="top">
+            Top Navigation
+          </DropdownMenuRadioItem>
           <DropdownMenuRadioItem value="both">Combined</DropdownMenuRadioItem>
         </DropdownMenuRadioGroup>
       </DropdownMenuContent>
