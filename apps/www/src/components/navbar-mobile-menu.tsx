@@ -17,7 +17,7 @@ export function NavbarMobileMenu(): JSX.Element {
   const [isOpen, setOpen] = useState(false);
 
   return (
-    <div className="md:hidden mx-3">
+    <div className="md:hidden ml-3">
       <Drawer onOpenChange={setOpen} open={isOpen}>
         <DrawerTrigger asChild>
           <Button className="font-medium text-lg" variant="ghost">
@@ -33,8 +33,6 @@ export function NavbarMobileMenu(): JSX.Element {
                 </Button>
               </DrawerClose>
             </DrawerHeader>
-
-            {/*<div className="bg-blue-500 h-96">hello</div>*/}
 
             <div className="mt-4 mb-8 flex flex-col gap-4 items-center">
               {Object.entries(navigationItems).map(([key, value], index) => (

@@ -4,7 +4,7 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
   return {
     ...components,
     h1: ({ children }) => (
-      <h1 className="text-5xl md:text-6xl bg-black dark:bg-white text-white dark:text-black mb-4 p-2">
+      <h1 className="text-5xl md:text-6xl bg-black dark:bg-zinc-800 text-white mb-4 p-2">
         {children}
       </h1>
     ),

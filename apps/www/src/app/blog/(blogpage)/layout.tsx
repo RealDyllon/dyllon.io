@@ -9,7 +9,7 @@ export default function BlogPostLayout({
 }): JSX.Element {
   return (
     <div className="px-6 pt-6">
-      <div className="max-w-3xl mx-auto flex flex-col gap-2 mb-4">
+      <div className="max-w-3xl mx-auto flex flex-col gap-3 mb-4">
         <BackToBlogMain />
         {children}
         <div className="my-4">

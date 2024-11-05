@@ -14,7 +14,7 @@ export default async function Projects(): Promise<JSX.Element> {
       <div className="grid grid-cols-1 xl:grid-cols-2 max-w-screen-2xl gap-5 my-6 px-6">
         {projects.map((project) => (
           <div
-            className="bg-black dark:bg-white text-white dark:text-black px-5 py-5 hover:opacity-90 transition-all h-full flex flex-col"
+            className="bg-black dark:bg-zinc-900 text-white px-5 py-5 hover:opacity-90 transition-all h-full flex flex-col"
             key={project.route}
           >
             <Link className="flex-1 gap-1 flex flex-col" href={project.route}>
@@ -36,7 +36,7 @@ export default async function Projects(): Promise<JSX.Element> {
             <div className="flex gap-2">
               <Button
                 asChild
-                className="mt-4 border border-white dark:border-black"
+                className="mt-4 border border-white"
                 variant="ghost"
               >
                 <Link className="flex-1 flex gap-1" href={project.route}>
@@ -45,7 +45,7 @@ export default async function Projects(): Promise<JSX.Element> {
               </Button>
               <Button
                 asChild
-                className="mt-4 flex-1 flex gap-1"
+                className="mt-4 flex-1 flex gap-1 dark:bg-white dark:text-black"
                 variant="secondary"
               >
                 <a
