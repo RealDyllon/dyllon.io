@@ -1,5 +1,4 @@
 import React from "react";
-import Navbar from "../components/Navbar";
 import contactData from "../data/contact";
 import { LanguagesCarousel } from "../components/languages-carousel";
 

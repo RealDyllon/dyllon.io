@@ -22,7 +22,7 @@ export async function getBlogPostMetadata() {
     fileNames.map(async (fullPath) => {
       // Get the relative path from the blog directory as the route
       const relativePath = path.relative(postsDirectory, fullPath);
-      const id = `${relativePath.replace(/\/page\.mdx$/, '')}`;
+      const id = `${relativePath.replace(/\/page\.mdx$/, '').replace(/\(blogpage\)/, '')}`;
       
       // Read markdown file as string
       const fileContents = await fs.promises.readFile(fullPath, 'utf8');
@@ -37,7 +37,7 @@ export async function getBlogPostMetadata() {
           .find(line => !line.startsWith('#') && line.trim().length > 0) || '';
 
         return {
-          route: id,
+          route: `/blog${id}`,
           frontmatter: {
             ...matterResult.data,
             subtitle: firstSentence.trim()
