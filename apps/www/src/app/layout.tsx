@@ -1,4 +1,4 @@
-import "./global.css";
+import "@repo/ui/globals.css";
 
 import { Outfit } from "next/font/google";
 import React from "react";
@@ -22,7 +22,7 @@ export default function RootLayout({
           <Navbar />
           {children}
         </div>
-        <footer className="flex justify-center items-center h-16 border-t border-gray-200">
+        <footer className="flex justify-center items-center h-16 border-t">
           <small>&copy; Copyright 2024 Dyllon Gunawardhana</small>
         </footer>
       </body>
