@@ -34,7 +34,7 @@ export function LanguagesCarousel() {
             className="flex-none w-40 md:w-48 lg:w-64 xl:w-[calc(100vw/6)]"
             key={key}
           >
-            <img src={value.imageUri} className="h-16 w-16" alt={key} />{" "}
+            <img alt={key} className="h-16 w-16" src={value.imageUri} />{" "}
             {/* Added alt attribute for accessibility */}
           </div>
         ))}

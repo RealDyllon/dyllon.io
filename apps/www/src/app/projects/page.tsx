@@ -1,12 +1,12 @@
-import {ArrowRight, Info} from "lucide-react";
-import {getProjectMetadata} from "../../lib/getProjectMetadata.ts";
-import {Button} from "@repo/ui/components/ui/button";
+import { ArrowRight, Info } from "lucide-react";
+import { Button } from "@repo/ui/components/ui/button";
 import Link from "next/link";
+import { getProjectMetadata } from "../../lib/getProjectMetadata.ts";
 
-export default async function Projects(): JSX.Elementpnpm {
+export default async function Projects(): Promise<JSX.Element> {
   const projects = await getProjectMetadata();
 
-  console.log("projects", projects)
+  // console.log("projects", projects);
 
   return (
     <div>
@@ -14,25 +14,47 @@ export default async function Projects(): JSX.Elementpnpm {
       <div className="grid grid-cols-1 xl:grid-cols-2 max-w-screen-2xl gap-5 my-6 px-6">
         {projects.map((project) => (
           <div
-            className="bg-black dark:bg-white text-white dark:text-black px-5 py-5 hover:opacity-90 transition-all h-full flex flex-col">
-            <Link href={project.route} className="flex-1 gap-1 flex flex-col">
-              <h3 className="font-bold line-clamp-2 mt-1">{project.frontmatter.title}</h3>
-              <div className="flex-1">
-              </div>
-              <p className="mt-2 line-clamp-2">{project.frontmatter.description}</p>
-              {project.frontmatter.image && (
-                <img className="mt-4 aspect-[16/9]" src={project.frontmatter.image} alt={project.frontmatter.title}/>
-              )}
+            className="bg-black dark:bg-white text-white dark:text-black px-5 py-5 hover:opacity-90 transition-all h-full flex flex-col"
+            key={project.route}
+          >
+            <Link className="flex-1 gap-1 flex flex-col" href={project.route}>
+              <h3 className="font-bold line-clamp-2 mt-1">
+                {project.frontmatter.title}
+              </h3>
+              <div className="flex-1" />
+              <p className="mt-2 line-clamp-2">
+                {project.frontmatter.description}
+              </p>
+              {project.frontmatter.image ? (
+                <img
+                  alt={project.frontmatter.title}
+                  className="mt-4 aspect-[16/9]"
+                  src={project.frontmatter.image}
+                />
+              ) : null}
             </Link>
             <div className="flex gap-2">
-              <Button asChild variant="ghost" className="mt-4 border border-white dark:border-black">
-                <Link href={project.route} className="flex-1 flex gap-1">
-                    Find out more <Info size={20}/>
+              <Button
+                asChild
+                className="mt-4 border border-white dark:border-black"
+                variant="ghost"
+              >
+                <Link className="flex-1 flex gap-1" href={project.route}>
+                  Find out more <Info size={20} />
                 </Link>
               </Button>
-              <Button asChild variant="secondary" className="mt-4 flex-1 flex gap-1">
-                <a href={project.frontmatter.url} target="_blank" rel="noopener noreferrer" className="flex-1">
-                  Visit <ArrowRight size={20}/>
+              <Button
+                asChild
+                className="mt-4 flex-1 flex gap-1"
+                variant="secondary"
+              >
+                <a
+                  className="flex-1"
+                  href={project.frontmatter.url}
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  Visit <ArrowRight size={20} />
                 </a>
               </Button>
             </div>
