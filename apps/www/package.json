@@ -21,6 +21,7 @@
     "embla-carousel-auto-scroll": "catalog:",
     "embla-carousel-react": "catalog:",
     "gray-matter": "catalog:",
+    "lucide-react": "^0.454.0",
     "next": "catalog:",
     "react": "catalog:",
     "react-dom": "catalog:",

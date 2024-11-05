@@ -1,0 +1,77 @@
+---
+title: Setting Up K3s Using k3sup - The Easy Way
+subtitle: A quick guide to bootstrapping Kubernetes on remote servers
+image: https://images.unsplash.com/photo-1539367628448-4bc5c9d171c8?ixlib=rb-4.0.3&w=1920&q=85&fm=jpg&crop=entropy&cs=srgb
+date: 2024-08-15
+---
+
+# Setting Up K3s Using k3sup - The Easy Way
+
+Hello! I'm going to show you how to set up a lightweight Kubernetes cluster using K3s and this awesome tool called 
+k3sup (pronounced "ketchup"). This is way easier than manually SSH-ing and running commands on your server.
+
+I use k3s as a lightweight alternative to stock Kubernetes. It's great for small clusters - such as the one I host on hetzner.
+
+## Prerequisites
+- A remote server (I'm using a $10 Hetzner server, but you can use any provider you like)
+- SSH access to your server
+- k3sup installed on your local machine
+
+## Installing k3sup Locally
+
+First, grab k3sup using this command:
+
+```bash
+curl -sLS https://get.k3sup.dev | sh
+sudo install k3sup /usr/local/bin/
+```
+
+## Setting Up K3s Server
+Now for the fun part. Here's how to install K3s on your remote server:
+
+```bash
+export IP=<your-server-ip>
+k3sup install --ip $IP --user root
+```
+
+That's literally it! k3sup will SSH into your server, install K3s, and download the kubeconfig file to your local machine.
+
+## Testing Your Cluster
+Let's make sure everything's working:
+
+```bash
+export KUBECONFIG=/Users/$(whoami)/kubeconfig
+kubectl get nodes
+```
+
+You should see your node listed as READY. Pretty cool, right?
+
+## Why This is Awesome
+K3s is perfect for dev environments and small projects because:
+
+1. It's super lightweight (< 100MB binary)
+2. Single binary installation
+3. Low memory footprint
+4. Perfect for edge computing and IoT
+
+## Next Steps
+
+Now you can start deploying your apps! Here's a quick test deployment:
+
+```bash
+kubectl create deployment nginx --image=nginx
+kubectl expose deployment nginx --port=80 --type=LoadBalancer
+kubectl get svc
+```
+
+That's all folks! Let me know if you have any questions in the comments.
+
+## Troubleshooting
+
+If something goes wrong, check these common issues:
+
+* Make sure port 6443 is open on your server
+* Verify your SSH key permissions are correct
+* Check the K3s service status with systemctl status k3s
+
+Happy clustering! 🚀
