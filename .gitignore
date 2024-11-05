@@ -10,8 +10,4 @@ dist-ssr
 .cache
 server/dist
 public/dist
-/.idea/inspectionProfiles/Project_Default.xml
-/.idea/dbnavigator.xml
-/.idea/dyllon.io.iml
-/.idea/modules.xml
-/.idea/vcs.xml
+.idea

@@ -12,7 +12,6 @@ export default function Home(): JSX.Element {
 
   return (
     <>
-      <Navbar />
       <div className="">
         <main className="min-h-screen flex flex-col justify-center items-center">
           <div className="mx-4 flex flex-wrap justify-center">
