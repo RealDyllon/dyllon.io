@@ -1,6 +1,7 @@
 import "@repo/ui/globals.css";
 
 import { Outfit } from "next/font/google";
+import { GoogleAnalytics } from "@next/third-parties/google";
 import React from "react";
 import { ThemeProvider } from "@repo/ui/components/theme/provider";
 import Navbar from "../components/navbar.tsx";
@@ -34,6 +35,7 @@ export default function RootLayout({
           </footer>
         </ThemeProvider>
       </body>
+      <GoogleAnalytics gaId="G-3M4V10RQEG" />
     </html>
   );
 }

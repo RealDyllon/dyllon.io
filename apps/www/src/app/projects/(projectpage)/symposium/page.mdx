@@ -3,9 +3,11 @@ title: Symposium
 url: https://symposium.dyllon.io
 description: A social forum for discussions
 image: /projects/symposium-app.png
+date: 2024-10-20
 ---
 
 import { ProjectInfoVisitButton } from "../../../../components/project-info-visit-button";
+import { ProjectInfoViewRepoButton } from "../../../../components/project-info-view-repo-button";
 
 # Symposium - A social forum for discussions
 
@@ -13,4 +15,8 @@ A social forum for discussions.
 
 ![Symposium Screenshot](/projects/symposium-app.png)
 
-<ProjectInfoVisitButton url={"https://symposium.dyllon.io"} />
+<div className="flex flex-col md:flex-row gap-1 md:gap-4">
+  <ProjectInfoVisitButton url={"https://symposium.dyllon.io"} />
+
+  <ProjectInfoViewRepoButton url={"https://github.com/RealDyllon/symposium"} />
+</div>

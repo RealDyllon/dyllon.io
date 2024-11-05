@@ -14,6 +14,7 @@
     "@mdx-js/loader": "catalog:",
     "@mdx-js/react": "catalog:",
     "@next/mdx": "catalog:",
+    "@next/third-parties": "14.2.16",
     "@react-hook/window-scroll": "catalog:",
     "@repo/logger": "workspace:*",
     "@repo/ui": "workspace:*",

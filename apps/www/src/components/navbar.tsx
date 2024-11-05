@@ -1,7 +1,5 @@
-"use client";
-
 import React from "react";
-import useScrollPosition from "@react-hook/window-scroll";
+// import useScrollPosition from "@react-hook/window-scroll";
 import { ThemeToggle } from "@repo/ui/components/theme/theme-toggle";
 import { Button } from "@repo/ui/components/ui/button";
 import Link from "next/link";
@@ -18,7 +16,7 @@ const items = [
 ];
 
 function Navbar({ hideAtTop = false }: Options) {
-  const scrollY = useScrollPosition(hideAtTop ? 0 : 60 /*fps*/);
+  // const scrollY = useScrollPosition(hideAtTop ? 0 : 60 /*fps*/);
 
   return (
     <div className="h-16 w-full sticky top-0 px-4 py-4 flex items-center bg-white text-black dark:bg-black dark:text-white">

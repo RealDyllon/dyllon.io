@@ -9,7 +9,7 @@ const config = {
   content: [
     // "./pages/**/*.{ts,tsx}",
     // "./components/**/*.{ts,tsx}",
-    // "./app/**/*.{ts,tsx}",
+    // "./app/**/*.{ts,tsx}"
     "./src/**/*.{js,ts,jsx,tsx,mdx}",
     "../../packages/ui/src/**/*.{ts,tsx}",
   ],
