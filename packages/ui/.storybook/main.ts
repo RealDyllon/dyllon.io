@@ -17,12 +17,8 @@ const config: StorybookConfig = {
   framework: '@storybook/experimental-nextjs-vite',
   staticDirs: [
     '../public',
-    '../static'
+    // '../static'
   ],
-  // framework: {
-  //   name: getAbsolutePath("@storybook/react-webpack5"),
-  //   options: {},
-  // },
   features: {
     experimentalRSC: true,
   },
