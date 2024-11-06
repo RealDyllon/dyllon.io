@@ -34,6 +34,15 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
         {children}
       </code>
     ),
+    a: ({ href, children }) => (
+      <a
+        className="text-sky-500 hover:underline"
+        href={href}
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        {children}
+      </a>),
     img: ({ src, alt }) => (
       <img
         alt={alt}

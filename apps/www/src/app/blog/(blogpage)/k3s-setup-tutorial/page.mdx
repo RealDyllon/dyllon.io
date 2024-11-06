@@ -7,16 +7,16 @@ date: 2024-08-15
 
 # Setting Up K3s Using k3sup - The Easy Way
 
-Hello! I'm going to show you how to set up a lightweight Kubernetes cluster using K3s and this awesome tool called
-k3sup (pronounced "ketchup"). This is way easier than manually SSH-ing and running commands on your server.
+Hello! I'm going to show you how to set up a lightweight Kubernetes cluster using K3s and k3sup (pronounced "ketchup").
+This is way easier than manually SSH-ing and running init commands on your server.
 
-I use k3s as a lightweight alternative to stock Kubernetes. It's great for small clusters - such as the one I host on hetzner.
+I use k3s as a lightweight alternative to stock Kubernetes. It's great for small clusters - such as the one I host on
+Hetzner.
 
 ## Prerequisites
 
 - A remote server (I'm using a $10 Hetzner server, but you can use any provider you like)
-- SSH access to your server
-- k3sup installed on your local machine
+- SSH access to your server (You must be able to ssh into your remote machine)
 
 ## Installing k3sup Locally
 
@@ -29,14 +29,15 @@ sudo install k3sup /usr/local/bin/
 
 ## Setting Up K3s Server
 
-Now for the fun part. Here's how to install K3s on your remote server:
+Here's how to install K3s on your remote server:
 
 ```bash
 export IP=<your-server-ip>
 k3sup install --ip $IP --user root
 ```
 
-That's literally it! k3sup will SSH into your server, install K3s, and download the kubeconfig file to your local machine.
+That's literally it. k3sup will SSH into your server, install K3s, and download the kubeconfig file to your local
+machine.
 
 ## Testing Your Cluster
 
@@ -68,7 +69,7 @@ kubectl expose deployment nginx --port=80 --type=LoadBalancer
 kubectl get svc
 ```
 
-That's all folks! Let me know if you have any questions in the comments.
+Also, if you interact with multiple k8s clusters, remember to name the context something unique.
 
 ## Troubleshooting
 
@@ -78,4 +79,4 @@ If something goes wrong, check these common issues:
 - Verify your SSH key permissions are correct
 - Check the K3s service status with systemctl status k3s
 
-Happy clustering! 🚀
+Happy clustering 🚀

@@ -7,11 +7,15 @@ image: https://unsplash.com/photos/jQ6bMceL4Gw/download?ixid=M3wxMjA3fDB8MXxzZWF
 
 # Containerizing a Node.js App with Docker: A Beginner's Guide
 
-Hey there! Today I'm going to walk you through how to containerize a Node.js application using Docker. When I first learned about containers, it seemed pretty intimidating, but I promise it's not that bad once you break it down into steps.
+Hey there! I'm going to walk you through how to containerize a Node.js application using Docker. Let's break it down
+into a few steps.
 
 ## What is Docker and Why Should You Care?
 
-Before we dive in, let's quickly cover what Docker is. Think of Docker as a way to package your entire application, including all its dependencies, into a single "container" that can run consistently anywhere. It's like creating a perfect little environment for your app that works the same way on your laptop, your friend's computer, or a server in the cloud.
+Before we dive in, let's quickly cover what Docker is. Think of Docker as a way to package your entire application,
+including all its dependencies, into a single "container" that can run consistently anywhere. It's like creating an
+isolated environment for your app that works the same way on your laptop, your coworker's computer, or a server in the
+cloud.
 
 ## Prerequisites
 
@@ -53,7 +57,7 @@ npm install express
 
 ## 2. Creating the Dockerfile
 
-Now comes the fun part! Create a file named Dockerfile (no extension) in your project root:
+Here's the important bit: create a file named Dockerfile (no extension) in your project root:
 
 ```dockerfile
 # Start from Node.js base image
@@ -111,4 +115,5 @@ The -p 3000:3000 flag maps port 3000 from the container to port 3000 on your mac
 
 ## Next Steps
 
-Try modifying the app and rebuilding the container. Play around with different Docker commands like docker ps to see running containers or docker images to list your images.
+Try modifying the app and rebuilding the container. Play around with different Docker commands like docker ps to see
+running containers or docker images to list your images.
