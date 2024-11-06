@@ -18,7 +18,7 @@ export default function Home(): JSX.Element {
         </div>
 
         <h4 className="my-16 mb-8 text-center">
-          i&apos;m a software engineer in Singapore
+          i&apos;m a software engineer in singapore
         </h4>
 
         <h6 className="mt-8 mb-16 text-center font-medium">
