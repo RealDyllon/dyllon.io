@@ -22,7 +22,7 @@ function Navbar({ hideAtTop = false }: Options) {
           </Button>
         </Link>
         <div className="flex-1" /> {/* Spacer */}
-        <div className="hidden md:flex flex-row items-center gap-2 ml-3">
+        <div className="hidden md:flex flex-row items-center gap-2 -mr-3">
           <ThemeToggle
             buttonVariant="ghost"
             contentClassname="rounded-sm"

@@ -12,6 +12,7 @@ import {
   AlertDialogCancel,
   AlertDialogAction,
 } from "./alert-dialog";
+import {Button} from "@repo/ui/components/ui/button.tsx";
 
 const meta: Meta<typeof AlertDialog> = {
   title: "UI/AlertDialog",
@@ -25,7 +26,9 @@ type Story = StoryObj<typeof AlertDialog>;
 export const Basic: Story = {
   render: () => (
     <AlertDialog>
-      <AlertDialogTrigger>Open Dialog</AlertDialogTrigger>
+      <AlertDialogTrigger>
+        <Button variant="outline">Show Dialog</Button>
+      </AlertDialogTrigger>
       <AlertDialogContent>
         <AlertDialogHeader>
           <AlertDialogTitle>Are you sure?</AlertDialogTitle>

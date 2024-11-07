@@ -4,7 +4,7 @@ import { ThemeToggle } from "./theme-toggle";
 const meta: Meta<typeof ThemeToggle> = {
   title: "Theme/ThemeToggle",
   component: ThemeToggle,
-  tags: ["autodocs"],
+  // tags: ["autodocs"],
 };
 
 export default meta;
