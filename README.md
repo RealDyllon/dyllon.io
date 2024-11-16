@@ -1,11 +1,15 @@
 # dyllon.io
 
-This monorepo includes the following packages and apps:
+This monorepo includes the following apps:
 
-### Apps and Packages
+### Apps
 
-- `api`: an [Express](https://expressjs.com/) server
-- `www`: a [Next.js](https://nextjs.org/) app for [www.dyllon.io](https://www.dyllon.io)
+- `api`: an Express api server
+- `www`: a Next.js app for [www.dyllon.io](https://www.dyllon.io)
+- `zen`: a Next.js app for [zen.dyllon.io](https://zen.dyllon.io)
+
+### Packages
+
 - `@repo/config-eslint`: ESLint configurations used throughout the monorepo
 - `@repo/config-typescript`: ESLint configurations used throughout the monorepo
 - `@repo/jest-presets`: Jest configurations
